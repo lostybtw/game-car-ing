@@ -20,6 +20,10 @@ function preload(){
   cari4 = loadImage("images/car4.png")
   // Milk
   track = loadImage("images/track.jpg")
+
+  music = loadSound("gametheme1.mp3")
+
+  
 }
 
 function setup(){
@@ -30,9 +34,12 @@ function setup(){
   game.start();
 }
 
-
 function draw(){
 
+
+  if(gameState == 1){
+    music.loop()
+  }  
   if(playerCount == 4){
     game.update(1);
   }
@@ -45,3 +52,4 @@ function draw(){
     game.end();
   }
 }
+
